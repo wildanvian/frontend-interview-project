@@ -35,8 +35,7 @@ npm run test:coverage
 **Read [TESTING_GUIDE.md](./TESTING_GUIDE.md)** for:
 - Step-by-step explanation of each test
 - How Jest & React Testing Library work
-- Common patterns and examples
-- Tips for the interview
+- Common patterns and best practices
 
 ## 🎯 Task 3 Requirements Met
 
@@ -69,7 +68,9 @@ src/
 │   ├── UserProfile.jsx           # API component
 │   └── UserProfile.test.jsx      # 12 tests (async)
 ├── setupTests.js                 # Jest configuration
-└── App.jsx                       # Main app
+├── App.jsx                       # Main app
+├── App.scss                      # Component styles
+└── index.scss                    # Global styles
 
 Configuration:
 ├── jest.config.js                # Jest settings
@@ -84,23 +85,30 @@ Configuration:
 - **@testing-library/user-event** - Simulate user interactions
 - **@testing-library/jest-dom** - Custom matchers
 
-## 💡 Key Features
+## 🎨 Styling
 
-### Simple & Easy to Understand
-- Clear test names describe what's being tested
-- Well-commented code explains each step
-- Follows Arrange-Act-Assert pattern
+### SCSS Architecture
 
-### Professional Quality
-- Mocked API calls with Jest
-- Async testing with `waitFor()`
-- Accessibility testing with ARIA
-- Edge case coverage
+```
+src/
+├── index.scss     # Global styles (reset, base typography, root styles)
+└── App.scss       # Component styles with variables
+```
 
-### Interview-Ready
-- Demonstrates best practices
-- Easy to explain and discuss
-- Shows understanding of testing concepts
+**Features**:
+- SCSS variables for consistent theming
+- Responsive grid layout (mobile-first)
+- Component-specific styles (TodoList, UserProfile)
+- Loading and error state styles
+- Mobile-responsive design (breakpoint at 768px)
+
+**Key Variables** (in `App.scss`):
+```scss
+$primary-color: #646cff;
+$danger-color: #ff4444;
+$border-color: #ccc;
+$bg-light: #f5f5f5;
+```
 
 ## 📖 Quick Test Example
 
@@ -125,7 +133,6 @@ See **[TESTING_GUIDE.md](./TESTING_GUIDE.md)** for:
 - Detailed explanation of every test
 - Testing concepts in simple terms
 - Common patterns and best practices
-- How to talk about it in the interview
 
 ---
 
@@ -151,7 +158,3 @@ npm run build
 - Vite 7.2
 - Jest 30.2
 - React Testing Library 16.3
-
----
-
-**Made with ❤️ for interview success!**

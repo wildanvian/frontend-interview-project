@@ -147,18 +147,39 @@ npm run lint     # Run ESLint
 
 ## 🎨 Styling Architecture
 
-SCSS files are organized in a proper folder structure:
+SCSS files are organized in a proper 7-1 folder structure:
 
 ```
 src/styles/
-├── global.scss              # Variables, mixins, base styles
-└── components/              # Component-specific styles
-    ├── Auth.scss
-    ├── Dashboard.scss
-    ├── Layout.scss
-    ├── UserList.scss
-    ├── UserDetail.scss
-    └── UserForm.scss
+├── main.scss                # Main entry point
+├── abstracts/               # Variables, mixins, functions
+│   ├── _index.scss
+│   ├── _variables.scss
+│   └── _mixins.scss
+├── base/                    # Base styles, resets
+│   ├── _index.scss
+│   ├── _reset.scss
+│   └── _typography.scss
+├── components/              # Component-specific styles
+│   ├── _index.scss
+│   ├── _badges.scss
+│   ├── _buttons.scss
+│   ├── _cards.scss
+│   ├── _forms.scss
+│   └── _modals.scss
+├── layout/                  # Layout components
+│   ├── _index.scss
+│   ├── _container.scss
+│   ├── _header.scss
+│   └── _footer.scss
+├── pages/                   # Page-specific styles
+│   ├── _index.scss
+│   ├── _auth.scss
+│   ├── _dashboard.scss
+│   └── _users.scss
+└── utilities/               # Utility classes
+    ├── _index.scss
+    └── _utilities.scss
 ```
 
 **Benefits**:
@@ -167,6 +188,7 @@ src/styles/
 - Clear separation of concerns
 - Reusable variables and mixins
 - Modern SASS with `@use` (no deprecated `@import`)
+- Industry-standard 7-1 pattern
 
 ## 🚀 Deployment
 
@@ -204,7 +226,7 @@ VITE_API_URL=https://api.example.com
 
 ### SCSS Variables
 
-Edit `src/styles/global.scss` to customize colors:
+Edit `src/styles/abstracts/_variables.scss` to customize colors:
 
 ```scss
 $primary-color: #4f46e5;
