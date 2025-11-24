@@ -1,0 +1,71 @@
+@use 'sass:color';
+
+// Responsive Mixins
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+// Card Mixin
+@mixin card {
+  background: var(--surface);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem;
+}
+
+// Button Base Mixin
+@mixin button-base {
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  text-decoration: none;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// Flexbox Center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Truncate Text
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Line Clamp
+@mixin line-clamp($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

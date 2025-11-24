@@ -1,0 +1,55 @@
+@use '../abstracts' as *;
+
+// Loading State
+.loading {
+  @include flex-center;
+  min-height: 400px;
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+}
+
+// Alerts
+.alert {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9375rem;
+
+  &.alert-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+  }
+
+  &.alert-success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+  }
+}
+
+// Icon
+.icon {
+  font-style: normal;
+}
+
+// Spacing Utilities
+.mt-1 {
+  margin-top: var(--spacing-sm);
+}
+.mt-2 {
+  margin-top: var(--spacing-md);
+}
+.mt-3 {
+  margin-top: var(--spacing-lg);
+}
+
+.mb-1 {
+  margin-bottom: var(--spacing-sm);
+}
+.mb-2 {
+  margin-bottom: var(--spacing-md);
+}
+.mb-3 {
+  margin-bottom: var(--spacing-lg);
+}

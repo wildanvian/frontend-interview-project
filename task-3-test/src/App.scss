@@ -1,0 +1,266 @@
+// Variables
+$primary-color: #646cff;
+$primary-hover: #535bf2;
+$danger-color: #ff4444;
+$danger-hover: #cc0000;
+$border-color: #ccc;
+$light-border: #eee;
+$bg-light: #f5f5f5;
+$loading-bg: #e3f2fd;
+$loading-color: #1976d2;
+$error-bg: #ffebee;
+$error-color: #c62828;
+$text-muted: #666;
+
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+}
+
+.components-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @media (min-width: 769px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.component-card {
+  border: 1px solid $border-color;
+  padding: 1rem;
+  border-radius: 8px;
+  background: white;
+}
+
+.user-selector {
+  margin-bottom: 1rem;
+
+  label {
+    margin-right: 0.5rem;
+  }
+
+  select {
+    padding: 0.5rem;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+  }
+}
+
+// TodoList Styles
+.todo-list {
+  text-align: left;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid $light-border;
+    border-radius: 4px;
+
+    span {
+      flex: 1;
+
+      &.completed {
+        text-decoration: line-through;
+        opacity: 0.6;
+      }
+    }
+
+    button {
+      padding: 0.25rem 0.75rem;
+      background: $danger-color;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.875rem;
+
+      &:hover {
+        background: $danger-hover;
+      }
+    }
+  }
+}
+
+.add-todo {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    background: white;
+    color: #213547;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    background: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background: $primary-hover;
+    }
+  }
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  button {
+    padding: 0.5rem 1rem;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+
+    &.active {
+      background: $primary-color;
+      color: white;
+      border-color: $primary-color;
+    }
+  }
+}
+
+// UserProfile Styles
+.user-profile {
+  text-align: left;
+
+  h2 {
+    margin-bottom: 1rem;
+    color: $primary-color;
+  }
+
+  p {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: $bg-light;
+    border-radius: 4px;
+  }
+
+  h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+[data-testid="loading"],
+[data-testid="error"],
+[data-testid="no-user"] {
+  padding: 2rem;
+  text-align: center;
+  border-radius: 4px;
+}
+
+[data-testid="loading"] {
+  background: $loading-bg;
+  color: $loading-color;
+}
+
+[data-testid="error"] {
+  background: $error-bg;
+  color: $error-color;
+
+  button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background: $primary-hover;
+    }
+  }
+}
+
+[data-testid="no-user"] {
+  background: $bg-light;
+  color: $text-muted;
+}
+
+code {
+  background: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: #213547;
+}
+
+input,
+select {
+  color: #213547;
+  background: white;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .add-todo {
+    flex-direction: column;
+
+    button {
+      width: 100%;
+    }
+  }
+
+  .filters {
+    flex-wrap: wrap;
+
+    button {
+      flex: 1 1 auto;
+      min-width: 80px;
+    }
+  }
+
+  .todo-list li {
+    flex-direction: column;
+    align-items: flex-start;
+
+    button {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+  }
+}

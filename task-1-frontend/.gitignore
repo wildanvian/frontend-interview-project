@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+
+# WordPress installation (exclude, only keep custom theme)
+wordpress/
+!wordpress/wp-content/
+wordpress/wp-content/*
+!wordpress/wp-content/themes/
+wordpress/wp-content/themes/*
+!wordpress/wp-content/themes/frontdev-portfolio/
+
+# WordPress config
+wordpress/wp-config.php
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+.cache/

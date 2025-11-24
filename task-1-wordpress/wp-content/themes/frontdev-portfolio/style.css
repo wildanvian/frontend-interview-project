@@ -1,0 +1,20 @@
+/*
+Theme Name: FrontDev Portfolio
+Theme URI: https://example.com/frontdev-portfolio
+Author: Frontend Developer
+Author URI: https://example.com
+Description: A modern, accessible, and responsive WordPress theme built with Gulp, SCSS, and ES6+ JavaScript. Features include a custom carousel, multi-step contact form, testimonials, and full WCAG compliance.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: frontdev-portfolio
+Tags: custom-menu, featured-images, threaded-comments, translation-ready, accessibility-ready, responsive-layout
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* 
+ * NOTE: The actual styles are compiled from SCSS and loaded via functions.php
+ * This file is required by WordPress for theme identification
+ */

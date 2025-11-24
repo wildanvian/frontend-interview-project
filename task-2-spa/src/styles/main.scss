@@ -1,0 +1,52 @@
+// 7-1 SASS Architecture Pattern
+// Main entry point for all styles
+
+@use 'abstracts/variables' as *;
+
+// 1. Abstracts - Configuration and helpers
+@use 'abstracts';
+
+// 2. Base - Basic styles and resets
+@use 'base';
+
+// 3. Layout - Structural layouts
+@use 'layout';
+
+// 4. Components - Reusable components
+@use 'components';
+
+// 5. Pages - Page-specific styles
+@use 'pages';
+
+// 6. Utilities - Helper classes and utilities
+@use 'utilities';
+
+// CSS Custom Properties for dynamic theming
+:root {
+  --primary-color: #{$primary-color};
+  --primary-dark: #{$primary-dark};
+  --secondary-color: #{$secondary-color};
+  --success-color: #{$success-color};
+  --danger-color: #{$danger-color};
+  --warning-color: #{$warning-color};
+
+  --background: #{$background};
+  --surface: #{$surface};
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+  --border-color: #{$border-color};
+
+  --shadow-sm: #{$shadow-sm};
+  --shadow-md: #{$shadow-md};
+  --shadow-lg: #{$shadow-lg};
+  --shadow-xl: #{$shadow-xl};
+
+  --radius-sm: #{$radius-sm};
+  --radius-md: #{$radius-md};
+  --radius-lg: #{$radius-lg};
+  --radius-full: #{$radius-full};
+
+  --transition-fast: #{$transition-fast};
+  --transition-base: #{$transition-base};
+  --transition-slow: #{$transition-slow};
+}

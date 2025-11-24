@@ -1,0 +1,86 @@
+@use '../abstracts' as *;
+
+.card {
+  @include card;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+.stat-card {
+  @include card;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  @include mobile {
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .stat-icon {
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      135deg,
+      rgba(79, 70, 229, 0.1) 0%,
+      rgba(79, 70, 229, 0.05) 100%
+    );
+    border-radius: 1rem;
+    flex-shrink: 0;
+
+    @include mobile {
+      width: 60px;
+      height: 60px;
+      font-size: 2rem;
+      border-radius: 0.75rem;
+    }
+  }
+
+  .stat-content {
+    flex: 1;
+    min-width: 0;
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
+      margin: 0;
+
+      @include mobile {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+.user-card {
+  @include card;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+}

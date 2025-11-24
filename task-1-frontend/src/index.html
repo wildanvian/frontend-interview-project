@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Frontend Development Portfolio - Responsive Design with Accessibility">
+  <meta name="keywords" content="frontend, developer, responsive, accessibility, portfolio">
+  <meta name="author" content="Frontend Developer">
+  <title>Frontend Portfolio | Responsive & Accessible Web Development</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header with Navigation -->
+  <header class="header" role="banner">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <a href="#home" aria-label="Frontend Portfolio - Home">
+            <span class="logo">FrontDev</span>
+          </a>
+          <button class="navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+        
+        <div class="navbar-menu" id="navbar-menu">
+          <ul class="navbar-nav" role="menubar">
+            <li class="nav-item" role="none">
+              <a href="#home" class="nav-link" role="menuitem">Home</a>
+            </li>
+            <li class="nav-item nav-item--dropdown" role="none">
+              <a href="#services" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">Services</a>
+              <div class="mega-menu" role="menu">
+                <div class="mega-menu-container">
+                  <div class="mega-menu-column">
+                    <h3>Development</h3>
+                    <ul>
+                      <li><a href="#frontend" role="menuitem">Frontend Development</a></li>
+                      <li><a href="#responsive" role="menuitem">Responsive Design</a></li>
+                      <li><a href="#performance" role="menuitem">Performance Optimization</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-column">
+                    <h3>Frameworks</h3>
+                    <ul>
+                      <li><a href="#react" role="menuitem">React</a></li>
+                      <li><a href="#vue" role="menuitem">Vue.js</a></li>
+                      <li><a href="#angular" role="menuitem">Angular</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-column">
+                    <h3>Tools</h3>
+                    <ul>
+                      <li><a href="#sass" role="menuitem">Sass/SCSS</a></li>
+                      <li><a href="#gulp" role="menuitem">Gulp</a></li>
+                      <li><a href="#webpack" role="menuitem">Webpack</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item" role="none">
+              <a href="#portfolio" class="nav-link" role="menuitem">Portfolio</a>
+            </li>
+            <li class="nav-item" role="none">
+              <a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a>
+            </li>
+            <li class="nav-item" role="none">
+              <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <!-- Hero Section with Carousel -->
+    <section id="home" class="hero-section" aria-label="Hero carousel">
+      <div class="carousel-container">
+        <div class="carousel" role="region" aria-label="Featured projects carousel">
+          <div class="carousel-track" aria-live="polite">
+            <div class="carousel-slide active" role="group" aria-label="Slide 1 of 3">
+              <img data-src="https://picsum.photos/1200/600?random=1" alt="Modern web application interface" class="carousel-image lazy-load">
+              <div class="carousel-content">
+                <h1>Modern Frontend Development</h1>
+                <p>Creating responsive, accessible, and performant web experiences</p>
+                <a href="#contact" class="btn btn--primary">Get Started</a>
+              </div>
+            </div>
+            <div class="carousel-slide" role="group" aria-label="Slide 2 of 3">
+              <img data-src="https://picsum.photos/1200/600?random=2" alt="Responsive design across devices" class="carousel-image lazy-load">
+              <div class="carousel-content">
+                <h1>Responsive Design Expert</h1>
+                <p>Ensuring perfect user experiences across all devices and screen sizes</p>
+                <a href="#portfolio" class="btn btn--primary">View Portfolio</a>
+              </div>
+            </div>
+            <div class="carousel-slide" role="group" aria-label="Slide 3 of 3">
+              <img data-src="https://picsum.photos/1200/600?random=3" alt="Accessibility-focused development" class="carousel-image lazy-load">
+              <div class="carousel-content">
+                <h1>Accessibility First</h1>
+                <p>Building inclusive web applications that work for everyone</p>
+                <a href="#services" class="btn btn--primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-btn--prev" aria-label="Previous slide">
+            <span aria-hidden="true">‹</span>
+          </button>
+          <button class="carousel-btn carousel-btn--next" aria-label="Next slide">
+            <span aria-hidden="true">›</span>
+          </button>
+          <div class="carousel-indicators" role="tablist" aria-label="Carousel pagination">
+            <button class="carousel-indicator active" role="tab" aria-label="Go to slide 1" aria-selected="true"></button>
+            <button class="carousel-indicator" role="tab" aria-label="Go to slide 2" aria-selected="false"></button>
+            <button class="carousel-indicator" role="tab" aria-label="Go to slide 3" aria-selected="false"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <h2>My Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Frontend Development</h3>
+            <p>Modern, responsive web applications using the latest technologies and best practices.</p>
+          </div>
+          <div class="service-card">
+            <h3>UI/UX Design</h3>
+            <p>User-centered design focusing on accessibility and optimal user experience.</p>
+          </div>
+          <div class="service-card">
+            <h3>Performance Optimization</h3>
+            <p>Fast-loading, optimized websites that provide excellent user experiences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="container">
+        <h2>Recent Projects</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <img data-src="https://picsum.photos/400/300?random=4" alt="E-commerce platform project" class="portfolio-image lazy-load">
+            <div class="portfolio-content">
+              <h3>E-commerce Platform</h3>
+              <p>Full-stack e-commerce solution with React and Node.js</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img data-src="https://picsum.photos/400/300?random=5" alt="Corporate website project" class="portfolio-image lazy-load">
+            <div class="portfolio-content">
+              <h3>Corporate Website</h3>
+              <p>Responsive corporate website with advanced animations</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <img data-src="https://picsum.photos/400/300?random=6" alt="Mobile application project" class="portfolio-image lazy-load">
+            <div class="portfolio-content">
+              <h3>Mobile App</h3>
+              <p>Cross-platform mobile application using React Native</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <h2>What Clients Say</h2>
+        <div class="testimonials-grid" id="testimonials-container">
+          <div class="loading-spinner" aria-label="Loading testimonials">
+            <div class="spinner"></div>
+            <p>Loading testimonials...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Share Your Testimonial</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>We'd Love to Hear From You</h3>
+            <p>Share your experience working with us. Your testimonial will be displayed above.</p>
+          </div>
+          <form class="multi-step-form" id="contactForm" novalidate>
+            <div class="form-progress">
+              <div class="progress-bar">
+                <div class="progress-fill"></div>
+              </div>
+              <div class="step-indicators">
+                <span class="step-indicator active" aria-label="Step 1: Personal Information">1</span>
+                <span class="step-indicator" aria-label="Step 2: Project Details">2</span>
+                <span class="step-indicator" aria-label="Step 3: Additional Information">3</span>
+              </div>
+            </div>
+
+            <!-- Step 1: Personal Information -->
+            <div class="form-step active" data-step="1">
+              <h3>Your Information</h3>
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required aria-describedby="firstName-error">
+                <div class="error-message" id="firstName-error" role="alert"></div>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required aria-describedby="lastName-error">
+                <div class="error-message" id="lastName-error" role="alert"></div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required aria-describedby="email-error">
+                <div class="error-message" id="email-error" role="alert"></div>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" aria-describedby="phone-error">
+                <div class="error-message" id="phone-error" role="alert"></div>
+              </div>
+              <div class="form-actions">
+                <button type="button" class="btn btn--secondary btn-next">Next Step</button>
+              </div>
+            </div>
+
+            <!-- Step 2: Project Details -->
+            <div class="form-step" data-step="2">
+              <h3>Your Experience</h3>
+              <div class="form-group">
+                <label for="projectType">Service Used *</label>
+                <select id="projectType" name="projectType" required aria-describedby="projectType-error">
+                  <option value="">Select service...</option>
+                  <option value="website">Website Development</option>
+                  <option value="webapp">Web Application</option>
+                  <option value="ecommerce">E-commerce Site</option>
+                  <option value="portfolio">Portfolio Site</option>
+                  <option value="other">Other</option>
+                </select>
+                <div class="error-message" id="projectType-error" role="alert"></div>
+              </div>
+              <div class="form-group">
+                <label for="budget">Rating *</label>
+                <select id="budget" name="budget" required aria-describedby="budget-error">
+                  <option value="">Select rating...</option>
+                  <option value="5-stars">⭐⭐⭐⭐⭐ Excellent</option>
+                  <option value="4-stars">⭐⭐⭐⭐ Very Good</option>
+                  <option value="3-stars">⭐⭐⭐ Good</option>
+                  <option value="2-stars">⭐⭐ Fair</option>
+                  <option value="1-star">⭐ Poor</option>
+                </select>
+                <div class="error-message" id="budget-error" role="alert"></div>
+              </div>
+              <div class="form-group">
+                <label for="timeline">When Did You Work With Us?</label>
+                <select id="timeline" name="timeline" aria-describedby="timeline-error">
+                  <option value="">Select timeframe...</option>
+                  <option value="current">Currently Working</option>
+                  <option value="recent">Within Last Month</option>
+                  <option value="3-months">2-3 Months Ago</option>
+                  <option value="6-months">6+ Months Ago</option>
+                </select>
+                <div class="error-message" id="timeline-error" role="alert"></div>
+              </div>
+              <div class="form-actions">
+                <button type="button" class="btn btn--tertiary btn-prev">Previous</button>
+                <button type="button" class="btn btn--secondary btn-next">Next Step</button>
+              </div>
+            </div>
+
+            <!-- Step 3: Additional Information -->
+            <div class="form-step" data-step="3">
+              <h3>Your Testimonial</h3>
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company" aria-describedby="company-error">
+                <div class="error-message" id="company-error" role="alert"></div>
+              </div>
+              <div class="form-group">
+                <label for="message">Your Testimonial *</label>
+                <textarea id="message" name="message" rows="5" required aria-describedby="message-error" placeholder="Share your experience working with us..."></textarea>
+                <div class="error-message" id="message-error" role="alert"></div>
+              </div>
+              <div class="form-group">
+                <div class="checkbox-group">
+                  <input type="checkbox" id="newsletter" name="newsletter">
+                  <label for="newsletter">I consent to display my testimonial publicly</label>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button type="button" class="btn btn--tertiary btn-prev">Previous</button>
+                <button type="submit" class="btn btn--primary">Submit Testimonial</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>FrontDev</h3>
+          <p>Professional frontend development services focused on modern, accessible, and performant web solutions.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Frontend Development</a></li>
+            <li><a href="#services">UI/UX Design</a></li>
+            <li><a href="#services">Performance Optimization</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:wildanvian@gmail.com">wildanvian@gmail.com</a></li>
+            <li><a href="tel:+6282120868593">+62 821-2086-8593</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Wildan Arvianto. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
